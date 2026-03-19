@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+.app {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 16px;
+  align-items: center;
+}
+
+body {
+  font-family: "Anton", sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 15.8px;
+  background: radial-gradient(circle,rgba(166, 102, 18, 1) 0%, rgba(168, 111, 19, 1) 100%);
+}
+
+h1, h2 {
+  color: #f0f0f0;
+  font-family: "Anton", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.exercicio-form {
+  background: radial-gradient(circle,rgb(166, 102, 18) 0%, rgba(168, 111, 19, 1) 100%);
+  border-radius: 20px;
+  border: 1px solid transparent;
+  margin: 20px auto;
+  width: 40%;
+  padding: 30px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  text-align: center;
+
+}
+.exercicio-card {
+  display: flex;
+  flex: 1;
+  background: black;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  margin: 20px auto;
+  width: 24%;
+  padding: 24px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+}
+.content-card {
+  text-align: left;
+}
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+footer { 
+  margin-top:auto;
+  text-align: center;
+  padding: 16px 0;
+  background: #222;
+}
+
+input {
+  border-radius: 11px;
+  border: 1px solid transparent;
+  padding: 5px;
+  text-align: center;
+}
+
+button {
+  border-radius: 11px;
+  border: 1px solid transparent;
+  padding: 6px;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+}
+
+.button-adicionar {
+  margin-top: 17px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button-limpar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button-card {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+}
+
+
+.concluido {
+  background: #1e832a !important;
+  color: #fff !important;
+}
