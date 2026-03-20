@@ -11,30 +11,33 @@ function AnotacoesExercicio({ id }) {     {/* criei minha funcao de anotacoes do
   useEffect(() => {
     localStorage.setItem(chave, texto)}, [texto, chave]);   {/* aqui eu to salvando minha anotacao no localStorage toda vez que o texto mudar*/}
 
-  return (
-    <div>
-      {!editando && (
-        <button onClick={() => setEditando(true)}>
-          Adicionar<br></br> anotação
-        </button>
-      )}
-      {editando && (
+  return (  
+    <div> {/* Seu comentário aqui */}
+      {editando && ( 
         <div>
           <textarea
             value={texto}
             onChange={e => setTexto(e.target.value)}
             placeholder="Digite sua anotacao"
           />
-          <button onClick={() => setEditando(false)}>
+          <button onClick={() => setEditando(false)} className="btn-salvar"> /* Outro comentário válido */ 
             Salvar
           </button>
         </div>
       )}
-      {!editando && texto && (
-        <div style={{ marginTop: '8px' }}>
+      {!editando && (
+        <div className="anotacao-area">
           <strong>Anotação:</strong>
-          <p>{texto}</p>
+          <p>{texto || <span style={{color:'#ccc'}}>Nenhuma anotação ainda.</span>}</p>
         </div>
+      )}
+      {!editando && ( 
+        <button   
+          onClick={() => setEditando(true)} 
+          className="anotacao-btn"
+        >
+          Adicionar<br />anotação
+        </button>
       )}
     </div>
   );

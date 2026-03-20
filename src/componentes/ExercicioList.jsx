@@ -8,7 +8,7 @@ function ExercicioList() {
         novoNomeExercicio: '',
         novoGrupoMuscular: '',
         novoNumSerie: '',
-        novoNumRep: '7',
+        novoNumRep: '',
     })
     const [exercicios, setExercicios] = useState (() => {
     const stored = localStorage.getItem('fit-track')

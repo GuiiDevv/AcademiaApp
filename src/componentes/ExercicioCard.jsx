@@ -13,6 +13,8 @@ function ExercicioCard({id, nomeExercicio, grupoMuscular = '', numSerie, numRep,
         <p>Numero de series: {numSerie}</p>
         <p>Numero de repeticoes: {numRep}</p>
       </div>
+      <AnotacoesExercicio id={id}
+      />
       <div className="button-card">
         {onRemover && (
           <button type="button" onClick={onRemover}> 
@@ -26,11 +28,10 @@ function ExercicioCard({id, nomeExercicio, grupoMuscular = '', numSerie, numRep,
           Concluído
         </button>
       {/*coloquei aqui para ficar abaixo dos dados do formulario, salvando por id e ter o bloco de anotacao para cada card*/}
-      <AnotacoesExercicio id={id}
-      />
+ 
       {/*esse botao [e apenas para eu usar o css nele e aplicar uma cor para mostrar que apenas foi concluido o exercicio*/}        
       </div>
-    </div>
+    </div> 
 
   )
 }
