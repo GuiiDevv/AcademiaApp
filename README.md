@@ -1,16 +1,64 @@
-# React + Vite
+# AcademiaApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicativo web para gerenciamento de exercícios físicos, desenvolvido com React e Vite.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Visualização de lista de exercícios
+- Adição de anotações para cada exercício
+- Interface moderna e responsiva
+- Componentes reutilizáveis (Header, Footer, ExercicioCard, etc.)
 
-## React Compiler
+## Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- CSS
 
-## Expanding the ESLint configuration
+## Estrutura do Projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+  App.jsx
+  main.jsx
+  assets/
+  componentes/
+    Header.jsx
+    Footer.jsx
+    ExercicioList.jsx
+    ExercicioCard.jsx
+    ...
+public/
+index.html
+package.json
+vite.config.js
+```
+
+## Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/AcademiaApp.git
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+## Contribuição
+
+1. Faça um fork do projeto
+2. Crie uma branch (`git checkout -b feature/nova-funcionalidade`)
+3. Commit suas alterações (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Faça o push para a branch (`git push origin feature/nova-funcionalidade`)
+5. Abra um Pull Request

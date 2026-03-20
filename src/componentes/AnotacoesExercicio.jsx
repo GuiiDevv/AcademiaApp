@@ -20,7 +20,7 @@ function AnotacoesExercicio({ id }) {     {/* criei minha funcao de anotacoes do
             onChange={e => setTexto(e.target.value)}
             placeholder="Digite sua anotacao"
           />
-          <button onClick={() => setEditando(false)} className="btn-salvar"> /* Outro comentário válido */ 
+          <button onClick={() => setEditando(false)} className="btn-salvar"> 
             Salvar
           </button>
         </div>

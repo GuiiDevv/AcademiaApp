@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 
 
 function ExercicioList() {
+    
     const [form, setForm] = useState({
         novoNomeExercicio: '',
         novoGrupoMuscular: '',
@@ -30,7 +31,7 @@ function ExercicioList() {
     const nomeInputRef = useRef(null)
     const limparHistorico = () => {
         localStorage.removeItem("fit-track");
-        // Zera o valor das anotações dos exercícios de 1 a 5
+        // Zera o valor das anotações dos exercícios  no local.storage de 1 a 5
         for (let i = 1; i <= 5; i++) {
             localStorage.setItem(`anotacao-exercicio-${i}`, '');
         }
@@ -52,9 +53,23 @@ function ExercicioList() {
         localStorage.setItem("fit-track", JSON.stringify(exercicios))
         console.log("💾 Exercicios salvos: ", exercicios.length )
     }, [exercicios])
+
+
+    const [erroNome, setErroNome] = useState('')
+
     const handleChange = (e) => {
-        const { name, value } = e.target
-        setForm(prev => ({ ...prev, [name]: value }))
+        const { name, value } = e.target;
+        setForm(prev => ({
+            ...prev,
+            [name]: value
+        }))
+        if (name === 'novoNomeExercicio') {
+            if (value.length > 0 && value.length < 3) {
+                setErroNome('O exercício deve conter 3 caracteres ou mais.');
+            } else {
+                setErroNome('')
+            }
+        }
     }
 
 
@@ -62,7 +77,11 @@ function ExercicioList() {
         event.preventDefault()
 
         if (!form.novoNomeExercicio.trim()) {
-            alert('Ìnforme um nome para o Exercicio.')
+            alert('Informe um nome para o Exercicio.')
+            return
+        }
+        if (erroNome) {
+            alert(erroNome)
             return
         }
 
@@ -98,12 +117,13 @@ function ExercicioList() {
                         <h3>Exercicio</h3>
                     </label>
                     <input
-                    type="text"
+                    type="text" 
                     name="novoNomeExercicio"
                     value={form.novoNomeExercicio}
                     onChange={handleChange}
                     ref={nomeInputRef}
                     />
+                    {erroNome && <p style={{ color: 'red', fontSize: '0.8rem'}}>{erroNome}</p>}
                 </div>
 
                 <div>
