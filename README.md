@@ -15,6 +15,7 @@ Aplicativo web para gerenciamento de exercícios físicos, desenvolvido com Reac
 - Vite
 - JavaScript
 - CSS
+- Html
 
 ## Estrutura do Projeto
 
