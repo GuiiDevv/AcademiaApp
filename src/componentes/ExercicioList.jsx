@@ -127,6 +127,7 @@ function ExercicioList() {
                     name="novoNumSerie"
                     value={form.novoNumSerie}
                     onChange={handleChange}
+                    min= {1}
                     />
                 </div>
 
@@ -139,6 +140,7 @@ function ExercicioList() {
                     name="novoNumRep"
                     value={form.novoNumRep}
                     onChange={handleChange}
+                    min= {1}
                     />
                 </div>
                 <button className='button-adicionar'type='Submit'>adicionar exercicio</button>
